@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --heading_font: 'Poppins', sans-serif;
+    --text_font: 'Roboto', sans-serif;
+    --btn_bg:#FF6F00;
+    --btn_bg_hover:#ff6200;
+    --nav_bg:#235F6A;
+    --main_bg:rgba(4, 29, 37, 0.8);
+    --txt:#fff;
+    --voucher_txt:#D17012;
+}
+body{
+    background: url(./sean-oulashin-KMn4VEeEPR8-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+#logo{
+    height: auto;
+    width: 200px;
+    position: absolute;
+    top: -65px;
+    left: 55px;
+    cursor: pointer;
+    z-index: 1;
+}
+.nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding-top: 1.1rem;
+    list-style-type: none;
+    background-color: var(--nav_bg);
+    height: 3rem;
+    width: 50%;
+}
+li a{
+    text-decoration: none;
+    color: var(--txt);
+}
+.nav ul li a:hover
+{
+    border-bottom: 3px solid var(--btn_bg_hover);
+    /* transition-property: ; */
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+}
+.main{
+    background-color: var(--main_bg);
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+   
+}
+h1{
+    color: var(--txt);
+    font-family: var(--heading_font);
+    font-size: 70px;
+    display: grid;
+    margin: 100px 0 0 0;
+    row-gap: -20px;
+}
+.wrapper{
+     margin-left: 70px;
+     color: var(--txt);
+}
+.wrapper>span{
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    margin-top: 50px;
+}
+h2{
+    color: var(--txt);
+    font-family: var(--heading_font);
+    font-size: 40px;
+    margin-top: 20px;
+}
+#c{
+    color: var(--voucher_txt);
+    font-size: 15px;
+    margin: -10px 0 0 0;
+}
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 0 25px 0;
+}
+button{
+    width: 50px;
+    height: 40px;
+    background: var(--btn_bg);
+    cursor: pointer;
+    border: 0.5px;
+}
+button ion-icon[name]
+{
+    font-size: 1.2em;
+
+}
+button:hover{
+    background: var(--btn_bg_hover);
+    color: var(--txt);
+    animation: myAnim 2s ease 0s 1 normal forwards;
+
+}
+@keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	40% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	50% {
+		transform: scale3d(0.85, 1.15, 1);
+	}
+
+	65% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	75% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.social a{
+    color: var(--nav_bg);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.social a ion-icon[name]
+{
+    margin-top: 75px;
+    margin-right: 25px;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0;
+    text-decoration: none;
+}
+.social a ion-icon[name]:hover
+{
+    color: var(--txt);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
